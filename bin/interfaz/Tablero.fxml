@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.SplitMenuButton?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="561.0" prefWidth="607.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="interfaz.TableroController">
+   <children>
+      <ImageView fitHeight="561.0" fitWidth="607.0" pickOnBounds="true" smooth="false">
+         <image>
+            <Image url="@images/back.jpg" />
+         </image>
+      </ImageView>
+      <TextField fx:id="size" layoutX="271.0" layoutY="30.0" prefHeight="27.0" prefWidth="107.0" style="-fx-background-radius: 20;" />
+      <Label layoutX="74.0" layoutY="35.0" text="Digite el tamaño del tablero:" textFill="WHITE">
+         <font>
+            <Font name="Arial Rounded MT Bold" size="14.0" />
+         </font>
+      </Label>
+      <SplitMenuButton fx:id="side" layoutX="78.0" layoutY="71.0" mnemonicParsing="false" prefHeight="27.0" prefWidth="205.0" style="-fx-background-color: white;" text="Elija lado del tablero ">
+        <items>
+          <MenuItem fx:id="sideLeft" mnemonicParsing="false" onAction="#stablishSideLeft" text="Lateral izquierdo" />
+          <MenuItem fx:id="sideRight" mnemonicParsing="false" onAction="#stablishSideRight" text="Lateral derecho" />
+            <MenuItem fx:id="sideUp" mnemonicParsing="false" onAction="#stablishSideUp" text="Techo superior" />
+            <MenuItem fx:id="sideDown" mnemonicParsing="false" onAction="#stablishSideDown" text="Techo inferior" />
+        </items>
+         <font>
+            <Font name="Arial Rounded MT Bold" size="14.0" />
+         </font>
+      </SplitMenuButton>
+      <SplitMenuButton fx:id="orientation" layoutX="309.0" layoutY="71.0" mnemonicParsing="false" prefHeight="27.0" prefWidth="193.0" style="-fx-background-color: white;" text="Elija orientación">
+        <items>
+          <MenuItem fx:id="noresteRight" mnemonicParsing="false" onAction="#stablishNERight" text="Noreste" />
+            <MenuItem fx:id="noresteUp" mnemonicParsing="false" onAction="#stablishNEUp" text="Noreste" />
+            <MenuItem fx:id="noroesteUp" mnemonicParsing="false" onAction="#stablishNOUp" text="Noroeste" />
+            <MenuItem fx:id="noroesteLeft" mnemonicParsing="false" onAction="#stablishNOLeft" text="Noroeste" />
+            <MenuItem fx:id="suroesteLeft" mnemonicParsing="false" onAction="#stablishSOLeft" text="Suroeste" />
+            <MenuItem fx:id="suroesteDown" mnemonicParsing="false" onAction="#stablishSODown" text="Suroeste" />
+          <MenuItem fx:id="suresteDown" mnemonicParsing="false" onAction="#stablishSEDown" text="Sureste" />
+            <MenuItem fx:id="suresteRight" mnemonicParsing="false" onAction="#stablishSERight" text="Sureste" />
+        </items>
+         <font>
+            <Font name="Arial Rounded MT Bold" size="14.0" />
+         </font>
+      </SplitMenuButton>
+      <GridPane fx:id="grid" layoutX="104.0" layoutY="140.0" prefHeight="400.0" prefWidth="400.0">
+      </GridPane>
+      <Button fx:id="generate" layoutX="391.0" layoutY="29.0" mnemonicParsing="false" onAction="#generateTable" onMouseClicked="#generateTable" prefHeight="27.0" prefWidth="107.0" style="-fx-background-radius: 15; -fx-background-color: white;" text="Generar">
+         <font>
+            <Font name="Arial Rounded MT Bold" size="14.0" />
+         </font>
+      </Button>
+   </children>
+</AnchorPane>
